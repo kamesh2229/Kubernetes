@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: my-app
+  labels:
+     app: myapp
+     type: front-end
+spec:
+  template:
+#This is the template for pod definition    
+    metadata:
+      name: myapp-pod
+      labels:
+         app: myapp
+         type: front-end
+    spec:
+      containers:
+      -  name: redis-container
+         image: redis
+
+  replicas: 3   

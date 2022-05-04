@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-redis-app
+  labels:
+     app: myrediapp
+     type: backend-database
+spec:
+  template:
+#This is the template for pod definition    
+    metadata:
+      name: my-redis-app-pod
+      labels:
+         app: myredisapp
+         type: backend-database
+    spec:
+      containers:
+      -  name: redis-container
+         image: redis
+
+  replicas: 3 
+#This will decide the pods to monitor based on the pod labels  
+  selector:
+     matchLabels:
+        type: backend-database

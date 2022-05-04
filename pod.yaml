@@ -1,0 +1,11 @@
+apiversion: v1
+kind: Pod
+metdata: 
+  name: redis
+  labels:
+    app: my-app
+    type: front-end
+spec:
+  containers:
+  - name: redis
+    image: redis 
