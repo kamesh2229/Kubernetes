@@ -98,11 +98,11 @@ ETCD cluster is stored with the kubernetes cluster information i.e configuration
 
 ### KUBE-API Server :
 
-What is KUBE-API Server :
+What is KUBE-API Server ?
 
 It acts as a API server to the user. What does this mean ? When a user tries to create a Kubernetes object the API server is first notified and then it validates the request, perform the needed task and send back the needed information to the user.
 
-Why we need Kube-API server :
+Why we need Kube-API server ?
 
 There should be a central mechanism that should validate the user request and ensure that the request is coming from a valid user, as well it is a valid request and then asks the respective cmponents to perform the needed task. It is also important that the changed state has to be updated with the ETCD cluster which KUBE-API server will take care.
 
@@ -117,6 +117,36 @@ Example: A user tries to create a pod using a spec of a command i.e kubectl run 
 5) Update ETCD
 6) Scheduler will decide on which node the pod to be created
 7) Kubelet on the specific node will create the pod
+
+### Kube-Controller-Manager :
+
+What is Kube-Controller-Manager ?
+
+Controllers are kind of daemons that will watch the state of the cluster and then make the changes to the cluster if something is not as expected.
+This is an automatic way of handling the issues to be fixed or also known as self healing mechanism.
+
+Controllers talk to kube-API server and gets the information of the node through kubelet.
+
+Why we need Controller ?
+
+With a cluster having 10s or 100s of nodes and 100s or 1000s of applications running there should be some automatic mechanism to see that all nodes are healthy always for the applications to have HA. 
+
+What it actually do ?
+
+There are different types of controllers.
+ 1) Node Controller
+ 2) Replication Controller
+
+Node Controller :
+
+The Node-controller will do this task to see that all nodes are healthy and if any node is not healthy it will mark it as "Not Ready" and the pods(smallest object of Kubernetes where the application is run) on that nodes will be scheduled to a different node if they part part of a replicaset.
+
+Replication Controller :
+
+It is responsible for monitoring the status of replicasets and ensuring that desired number of pods are available all the times within the set. If a pod dies then a new pod is launched to makre sure the number of replicas defined are available.
+
+Note : There are couple of concepts like pod, replicaset etc were discussed which will be expalined in detailed going forward. For now think of them as kubernetes objects.
+
 
 
 
