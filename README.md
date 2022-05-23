@@ -345,3 +345,9 @@ kubectl run <container-name> --image <image-name>
   Kubernetes will create a pod with the name "nginx-xxx-yyy".
   
   The pods created can be viewed using kubectl get pods command where a pod with name nginx will be available and the state of the pod is "Running".
+
+ ### Kubernetes manifest file for an object to create
+  
+  What is a manifest file ?
+  
+  
