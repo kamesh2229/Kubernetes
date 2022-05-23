@@ -328,3 +328,20 @@ A multi container pod is how looks below..
 <img width="544" alt="image" src="https://user-images.githubusercontent.com/31388628/169848854-95df93e5-3507-4d02-91e2-4feff2974a03.png">
 
 
+How to create a pod ?
+
+A pod can be created using kubectl command utility tool or using a pod manifest file generally written in YAML.
+
+kubectl run <container-name> --image <image-name>
+  
+  Ex: Running an nginx container as a pod..
+  
+  kubectl run nginx --image nginx
+  
+  What this command will actually do ?
+  
+  This will create a kubernetes object called pod where nginx container is running in the pod. The --image option will fetch the image specified from the Docker Hub Repository and conatiner is deployed using the name "nginx".
+  
+  Kubernetes will create a pod with the name "nginx-xxx-yyy".
+  
+  The pods created can be viewed using kubectl get pods command where a pod with name nginx will be available and the state of the pod is "Running".
