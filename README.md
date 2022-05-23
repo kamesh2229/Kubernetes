@@ -1,10 +1,13 @@
 # Kubernetes
-Kubernetes Repo For learnings and Hands on using minikube
+This is the repository that gives a fair knowledge on Kubernetes by comparing it with a Railway Station and how it services the actual purpose for the end users, different components involved and some basic examples on different mainfest files that any one can start to learn from basics.
 
-# I will be discussing the below topics
+Basics are very important and if it is understood clearly then any complex applications can be created and deployed from scratch easily.
+
+## I will be discussing the below topics
 a) What is kubernetes
 b) Highlevel architecure of K8S
-c) Deploying applications in k8S
+c) Different Kubernetes Objects
+d) How an application is deployed in K8s.
 d) Monitoring k8S cluster
 
 ## What is Kubernetes
