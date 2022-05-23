@@ -20,7 +20,7 @@ spec:
          image: redis
 
   replicas: 3 
-#This will decide the pods to monitor based on the pod labels  
+#This will decide which pods to monitor based on the pod labels  
   selector:
      matchLabels:
         type: backend-database
