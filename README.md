@@ -60,14 +60,23 @@ So based on the components that are installed on the machines a user can decide 
                    
   ### Comparison Of a Kubernetes Cluster to a Railway Station :
   
-  Kubernetes Master node ---> Governing body of Railway station which consists of multiple people that handles different tasks.
+ #### Kubernetes Master node ---> Governing body of Railway station which consists of multiple people that handles different tasks.
   
-  ETCD cluster ---> This is the system that has all information about the state of the Railway station, how many platforms exists, state of each platform, condition etc.
+  ETCD-Cluster ---> This is the system that has all information about the state of the Railway station, how many platforms exists, state of each platform, condition, Trains that pass the station daily etc.
+  
   Controller-Manager ---> The system or the person that will check on the status of the platforms if free or occupied, health check of the platform, other criteria to meet if a train can be scheduled or not.
+  
   Scheduler ---> The system or the person to decide which train to be scheduled on which platform based on certain criteria like platform availability, platform length vs train length, condition etc.
-  Kube-API server ---> 
+  
+  Kube-API server ---> This is the display board which is installed infront of the station where passengers will interact with to know which train is scheduled on which platform and at what time. The display board will act as an API that will be interacted with the passengers and the display board will be interacted with other components of the governing body where the display will fetch the data from other components and communicate to the passengers.
+  
+#### Kubernetes Worker nodes ---> These are the different platforms where the trains are scheduled and serves the passengers. Each platform has a name or number called PF1, PF2 which are similar to node names.
  
-
+ Kubelet ---> This is the signalling system or the signals that is available for each platform which interacts with the kube-api server and schedule the train on the platform. 
+ 
+ Kube-Proxy ---> 
+ 
+ Container Run Time Engine ---> The train is the container and the driver is the run time enginer which will ensure the containers are running as expected.
 
 
 
