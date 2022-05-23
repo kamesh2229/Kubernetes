@@ -270,3 +270,26 @@ What is Docker Registry ?
 A Docker Registry is an application or a server that stores the images and supplies to the users based on the request.
 A registry will help to control on the image storage, ownership and re-usability where multiple users can store, retrieve the images available in the registry as a central location.
 
+So from above information what we understood ?
+
+Applications are deployed as containers which are nothing but Docker images on Kubernetes nodes as a Kubernetes object.
+
+## Kubernetes Objects :
+
+What are Kubernetes Objects ?
+
+Kubernetes objects are persistent entities in the Kubernetes system.Kubernetes uses these entities to represent the state of the cluster.
+Using these objects one can understand what containerized applications are running on which nodes.
+
+The different Kubernetes objects available are as below
+
+1) Pods
+2) Namespaces
+3) Replication Controller
+4) Deployment Controller
+5) Statefulsets
+6) DaemonSets
+7) Services
+8) ConfigMaps
+
+lets deep dive into each of these objects and understand how to deploy applications using these objects in a Kubernetes cluster.
