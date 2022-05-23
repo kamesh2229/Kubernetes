@@ -4,11 +4,11 @@ This is the repository that gives a fair knowledge on Kubernetes by comparing it
 Basics are very important and if it is understood clearly then any complex applications can be created and deployed from scratch easily.
 
 ## I will be discussing the below topics
-a) What is kubernetes
-b) Highlevel architecure of K8S
-c) Different Kubernetes Objects
-d) How an application is deployed in K8s.
-d) Monitoring k8S cluster
+1) What is kubernetes
+2) Highlevel architecure of K8S
+3) Different Kubernetes Objects
+4) How an application is deployed in K8s.
+5) Monitoring k8S cluster
 
 ## What is Kubernetes
 
