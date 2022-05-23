@@ -163,6 +163,20 @@ What the scheduler will do ?
 Example : A user tries to create a nginx pod which acts as webpage that to be disaplyed to millions of users when opened in a browser. Once the command is executed a pod is generated but where should that pod be scheduled and run with multiple nodes available ? This is where the scheulder comes into picture and decide based on different criteria like labels, available cpu/memory etc and schedule the pod on a specific node and serves the needed functionality.
 
 
+### Kubelet :
+
+What is Kubelet ?
+
+A Kubelet is the node-agent that runs on each worker node. This is the component that will register the node with the Kube-API server and then the Kube-API server pass the information to the Kube-scheduler.
+
+Why we need Kubelet ?
+
+There should be some one who tries to tell that my node is alive and some objects can be scheduled on the node who take the responsibility of running the pod on the specific node. As it is difficult by the scheuler and Kube-API server to perform all these tasks kubelet takes this responsibility.
+
+What does it actually do ?
+
+Kubelet will tell that the node is alive and the node is "Ready" to handle the applications. Once the node state is marked "Ready" then scheduler know that the pods can be scheduled on this node which kubelet will receive the needed information and then the pod will be run to serve the application.
+
 
 
 
