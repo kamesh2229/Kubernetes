@@ -234,3 +234,18 @@ AWS provides EKS (Elastic Kubernetes Service)
 Azure provides AKS (Azure Kubernetes Service)
 Google provides GKE (Google Kubernetes Engine)
 
+# Kubernetes command line utility (Kubectl)
+
+What is kubectl ?
+
+Kubectl is a command line tool for kubernetes that allows to run specific instructions against the kubernetes cluster.
+Ex : Once the kubernetes cluster is installed to check the number of nodes available in the cluster can be done using "kubectl get nodes" command..
+
+Sample output for "kubectl get nodes" command in a minikube cluster that has only one node
+
+kubectl get nodes
+NAME       STATUS   ROLES                  AGE   VERSION
+minikube   Ready    control-plane,master   27d   v1.23.3
+
+It is also used to deploy applications as kubernetes objects and once a user provides the command with the correct set of parameters then it intreacts with the kube-API server to process the request and sends back the output to the user.
+
