@@ -249,3 +249,24 @@ minikube   Ready    control-plane,master   27d   v1.23.3
 
 It is also used to deploy applications as kubernetes objects and once a user provides the command with the correct set of parameters then it intreacts with the kube-API server to process the request and sends back the output to the user.
 
+# Deploying of Applications In a Kubernetes Cluster
+
+Once a kubernetes cluster is up and running then users can deploy their applications in the cluster.
+
+But wait ...
+
+Before deploying something we need to uunderstand the container technology called "Docker" as the applications need to be packaged as Docker containers and then deploy as objects in Kubernetes using templates.
+
+What is Docker ?
+
+Docker is a famous container technology that will package application code along with the needed dependencies as an image called as "Docker image".
+So a docker image contains the needed software for a specific application that can deploy on a normal Docker engine, an orchestration platform from Docker called Docker Swarm or a more advanced orchestration platform like Kubernetes.
+
+Docker uses a concept called Docker file that contains specific instructions to build an image for meeting the needed requirements of the application.
+Once the image is built and is pushed to Docker Registry a user can run the image using "docker run" command or deploy as an object in kubernetes using the needed manifest file.
+
+What is Docker Registry ?
+
+A Docker Registry is an application or a server that stores the images and supplies to the users based on the request.
+A registry will help to control on the image storage, ownership and re-usability where multiple users can store, retrieve the images available in the registry as a central location.
+
