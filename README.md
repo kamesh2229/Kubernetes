@@ -45,6 +45,7 @@ A minion node consists of the components Kubelet, kube-proxy, container runtime 
 So based on the components that are installed on the machines a user can decide if the node is a master or minion.
 
 
+<img width="239" alt="image" src="https://user-images.githubusercontent.com/31388628/169789077-bf9521fa-f784-4a2c-b709-8b2e986a2ed8.png">
 
 
 
