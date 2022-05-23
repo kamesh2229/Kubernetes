@@ -218,7 +218,7 @@ A node to be a master the components like (Kube-API server, Kube-controller-mana
 
 A Cluster can have any number of masters and workers but having more workers will need to take care of the maintenance, performance of the cluster which will be bit tricky.
 
-There is no solution but based on the use case it can be decided on how many nodes one can have in their cluster.
+There is no one fit solution but based on the use case it can be decided on how many nodes one can have in their cluster.
 
 Security is one very important aspect where TLS/SSL certificates to be configured as part of the cluster installation where different services,components and applications interact each other in a secured way.
 
