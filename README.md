@@ -304,3 +304,11 @@ A pod is a single instance of an application and it is the smallest object that 
 A sample example of a pod deployed to a couple of worker nodes in a Kubernetes cluster is below
 
 <img width="544" alt="image" src="https://user-images.githubusercontent.com/31388628/169844137-6458da43-4b73-47c4-a8ce-28609f0fca0c.png">
+
+Here couple of users are trying to acces the pods i.e applications deployed and able to handle the functionality.
+
+What happens if the number of user base increases and there is a load on the system ?
+
+Then in tha case we need to scale the application to handle more traffic i.e deploy more pods which are nothing but the containers of the application that runs on different worker nodes or the same worker node based on the need.
+
+This kind of scaling the application is called "Horizaontal scaling" where the number of instances of the application is increased.
