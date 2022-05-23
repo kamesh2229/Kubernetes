@@ -1,5 +1,5 @@
 # Kubernetes
-This is the repository that gives a fair knowledge on Kubernetes by comparing it with a Railway Station and how it services the actual purpose for the end users, different components involved and some basic examples on different mainfest files that any one can start to learn from basics.
+This is the repository that gives a fair knowledge on Kubernetes by comparing it with a Railway Station (To understand the concepts in an easier way) and how it services the actual purpose for the end users, different components involved and some basic examples on different mainfest files that any one can start to learn from basics.
 
 Basics are very important and if it is understood clearly then any complex applications can be created and deployed from scratch easily.
 
