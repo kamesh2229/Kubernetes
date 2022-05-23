@@ -293,3 +293,14 @@ The different Kubernetes objects available are as below
 8) ConfigMaps
 
 lets deep dive into each of these objects and understand how to deploy applications using these objects in a Kubernetes cluster.
+
+POD :
+
+What is a Pod ?
+
+Kubernetes doesn't deploy containers directly on the worker nodes instead they are encapsulated into Kubernetes object called "pod".
+A pod is a single instance of an application and it is the smallest object that can be created in Kubernetes.
+
+A sample example of a pod deployed to a couple of worker nodes in a Kubernetes cluster is below
+
+<img width="544" alt="image" src="https://user-images.githubusercontent.com/31388628/169844137-6458da43-4b73-47c4-a8ce-28609f0fca0c.png">
