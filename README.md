@@ -79,6 +79,46 @@ So based on the components that are installed on the machines a user can decide 
  Container Run Time Engine ---> The train is the container and the driver is the run time enginer which will ensure the containers are running as expected.
 
 
+## Deep dive on Kubernetes components
+
+### ETCD :
+
+What is ETCD ?
+
+ETCD is a simple distributed key-value store that faster and secure.
+
+Why we need ETCD ?
+
+As said Kubernetes cluster consists of multiple nodes (masters and minions), multiple applications running as containers and other different components. There should be some way to monitor the state of the cluster and store somewhere such that the same state can be retrieved if an issue occurs.
+
+What ETCD stores ?
+
+etcdctl is a command line tool that will help to store the needed information in the etcd cluster using key-value schema.
+ETCD cluster is stored with the kubernetes cluster information i.e configuration data, its state and its metadata.
+
+### KUBE-API Server :
+
+What is KUBE-API Server :
+
+It acts as a API server to the user. What does this mean ? When a user tries to create a Kubernetes object the API server is first notified and then it validates the request, perform the needed task and send back the needed information to the user.
+
+Why we need Kube-API server :
+
+There should be a central mechanism that should validate the user request and ensure that the request is coming from a valid user, as well it is a valid request and then asks the respective cmponents to perform the needed task. It is also important that the changed state has to be updated with the ETCD cluster which KUBE-API server will take care.
+
+What KUBE-API server will do ?
+
+Example: A user tries to create a pod using a spec of a command i.e kubectl run the following sequence happens.
+
+1) User issues the request
+2) Kube-API server autenticate's the user
+3) Validate Requests
+4) Retrieve the data
+5) Update ETCD
+6) Scheduler will decide on which node the pod to be created
+7) Kubelet on the specific node will create the pod
+
+
 
 
 
