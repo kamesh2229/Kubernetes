@@ -54,6 +54,8 @@ So based on the components that are installed on the machines a user can decide 
 <img width="259" alt="image" src="https://user-images.githubusercontent.com/31388628/169790506-d07ee01d-c48b-4801-95a5-1bece1e911e3.png">
 
 
+<img width="478" alt="image" src="https://user-images.githubusercontent.com/31388628/169794381-a473655a-e69e-44b5-8e5f-7bb32c21869f.png">
+
 
                    
   
