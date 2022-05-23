@@ -177,6 +177,20 @@ What does it actually do ?
 
 Kubelet will tell that the node is alive and the node is "Ready" to handle the applications. Once the node state is marked "Ready" then scheduler know that the pods can be scheduled on this node which kubelet will receive the needed information and then the pod will be run to serve the application.
 
+### Kube-proxy :
+
+What is Kube-Proxy ?
+
+Kube-proxy is a network component that runs on each node which is responsible for the communication of the applications/pods, services or other components in a node.
+
+Why we need Kube-proxy ?
+
+A simple of handling the DNS, IPtable mapping when a request is made to an application from a user through a service to communicate to the actual pod running on the node.
+
+What does Kube-proxy actually do ?
+
+Let us say we have several pods of an application running on multiple nodes in a cluster which those replicas exposed by a service. (We will learn what service is and its concepts later).
+When a user makes an API call it reaches the service virtual IP and then kube-proxy will forward the request to the pods using the rules defined in the kube-proxy component.
 
 
 
