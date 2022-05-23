@@ -312,3 +312,19 @@ What happens if the number of user base increases and there is a load on the sys
 Then in tha case we need to scale the application to handle more traffic i.e deploy more pods which are nothing but the containers of the application that runs on different worker nodes or the same worker node based on the need.
 
 This kind of scaling the application is called "Horizaontal scaling" where the number of instances of the application is increased.
+
+A Pod can have single container or multiple containers. 
+
+What is multiple container ?
+
+As said a container is enscapulated into Kubernetes object called "pod", so we can encapsulate multiple containers and deploy as pods. 
+
+Why multiple containers are needed ?
+
+There can be situation where the application should have some pre-conditions to be met and in this case before the application is started the pre-conditions are met by running another container before the application container is started and these are also called as helper containers.
+
+A multi container pod is how looks below..
+
+<img width="544" alt="image" src="https://user-images.githubusercontent.com/31388628/169848854-95df93e5-3507-4d02-91e2-4feff2974a03.png">
+
+
