@@ -26,7 +26,13 @@ All these applications can talk each other to serve a specific purpose that prov
 
 What is a container :
 
-A container is a 
+A container is a software unit that packages code, its dependencies so that applications can run quickly and reliable in any environment.
+There are different container technologies like Docker, rkt etc where applications can be packaged together with all the dependencies.
+
+But Docker is widely and popularly used container technology where Enterprise companies use and can be deployed on different orchestration platforms.
+Docker containers are secure and can scale on demand.
+
+Basically on a Kubernetes cluster the applications are deployed as Docker containers. Kubernetes try to orchestrate these containers by providing HA, network connectivity, Scalability, Resilience in a secured way.
 
 ### Kubernetes components :
 
@@ -75,7 +81,7 @@ So based on the components that are installed on the machines a user can decide 
   
 #### Kubernetes Worker nodes ---> These are the different platforms where the trains are scheduled and serves the passengers. Each platform has a name or number called PF1, PF2 which are similar to node names.
  
- Kubelet ---> This is the signalling system or the signals that is available for each platform which interacts with the kube-api server and schedule the train on the platform. 
+ Kubelet ---> This is the signalling system or the signals that are available for each platform which interacts with the kube-api server and schedule the train on the platform. 
  
  Kube-Proxy ---> 
  
@@ -196,4 +202,35 @@ Let us say we have several pods of an application running on multiple nodes in a
 When a user makes an API call it reaches the service virtual IP and then kube-proxy will forward the request to the pods using the rules defined in the kube-proxy component.
 
 
+# Installation of Kubernetes Cluster
+
+This document doesn't deep dive into the Kubernetes installation but at a highlevel we will discuss on different aspects.
+
+Kubernetes can be installed on baremetal, VM's on-prem as well in a cloud provided environment.
+There are different tools available to deploy a kubernetes cluster or a hard-way installation is possible that will need to do all component installation on each machine and boostrap the services to work as expected.
+
+Based on the usecase a kubernetes cluster can have a single node, 2 nodes or N-nodes where different applications can be deployed and used as needed.
+It provides different capabilities like upgrading the clusters to new kubernetes versions, monitoring of the kubernetes cluster and other functionality provided by different Kubernetes API's.
+
+As described above all the needed components to be installed on the nodes based on how many master and how many worker nodes are needed and then joing the nodes to form a kuberentes cluster.
+
+A node to be a master the components like (Kube-API server, Kube-controller-manager, Kube-scheduler, ETCD-cluster) to be installed and for a node to be a worker (Kubelet, kube-proxy, container Runtime Engine) to be installed. 
+
+A Cluster can have any number of masters and workers but having more workers will need to take care of the maintenance, performance of the cluster which will be bit tricky.
+
+There is no solution but based on the use case it can be decided on how many nodes one can have in their cluster.
+
+Security is one very important aspect where TLS/SSL certificates to be configured as part of the cluster installation where different services,components and applications interact each other in a secured way.
+
+Coming to the different cloud providers as we have 3 major ones like AWS, Azure, Google cloud.
+Each cloud provider offers a manged kubernetes cluster where the users can take care of maintaining only the worker nodes.
+
+What do i mean "managed Kubernetes" cluster ?
+
+As seen above a Kubernetes cluster contains 2 types of nodes i.e Controller node or master node and a worker node.
+The cloud providers take the responsibility of creating , maintaining the controller node where the services like Kube-API server, etcd etc will be handed by the cloud provider, as well the upgrades, security and other aspects will be taken care. The users can only launch the needed worker nodes and install the applications.
+
+AWS provides EKS (Elastic Kubernetes Service)
+Azure provides AKS (Azure Kubernetes Service)
+Google provides GKE (Google Kubernetes Engine)
 
