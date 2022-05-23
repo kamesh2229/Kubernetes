@@ -148,6 +148,20 @@ It is responsible for monitoring the status of replicasets and ensuring that des
 Note : There are couple of concepts like pod, replicaset etc were discussed which will be expalined in detailed going forward. For now think of them as kubernetes objects.
 
 
+### Kube-Scheduler :
+
+What is a kube-scheduler ?
+
+It is the control plane component that will schedule the pod on the kubernetes nodes based on certain criteria like if a label is assigned, available CPU/memory etc
+
+Why we need a scheduler ?
+
+When a user creates a kubernetes object that inturn creates a pod. A pod is a low level component that has the application code and should run on a worker node for providing the needed functionality to the user. 
+
+What the scheduler will do ?
+
+Example : A user tries to create a nginx pod which acts as webpage that to be disaplyed to millions of users when opened in a browser. Once the command is executed a pod is generated but where should that pod be scheduled and run with multiple nodes available ? This is where the scheulder comes into picture and decide based on different criteria like labels, available cpu/memory etc and schedule the pod on a specific node and serves the needed functionality.
+
 
 
 
