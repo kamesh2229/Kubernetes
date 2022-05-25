@@ -75,18 +75,17 @@ So based on the components that are installed on the machines a user can decide 
   
   Controller-Manager ---> The system or the person that will check on the status of the platforms if free or occupied, health check of the platform, other criteria to meet if a train can be scheduled or not.
   
-  Scheduler ---> The system or the person to decide which train to be scheduled on which platform based on certain criteria like platform availability, platform length vs train length, condition etc.
+  Scheduler ---> The signalling system or the person to decide which train to be scheduled on which platform based on certain criteria like platform availability, platform length vs train length, condition etc.
   
   Kube-API server ---> This is the display board which is installed infront of the station where passengers will interact with to know which train is scheduled on which platform and at what time. The display board will act as an API that will be interacted with the passengers and the display board will be interacted with other components of the governing body where the display will fetch the data from other components and communicate to the passengers.
   
 #### Kubernetes Worker nodes ---> These are the different platforms where the trains are scheduled and serves the passengers. Each platform has a name or number called PF1, PF2 which are similar to node names.
  
- Kubelet ---> This is the signalling system or the signals that are available for each platform which interacts with the kube-api server and schedule the train on the platform. 
+ Kubelet ---> This is the driver of the train who actually ensures the train is on the platform based on instructions from the scheduler who is the signalling system.
  
  Kube-Proxy ---> 
  
- Container Run Time Engine ---> The train is the container and the driver is the run time enginer which will ensure the containers are running as expected.
-
+ Container Run Time Engine ---> The train is the container.
 
 ## Deep dive on Kubernetes components
 
