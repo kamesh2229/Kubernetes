@@ -290,6 +290,7 @@ The different Kubernetes objects available are as below
 6) DaemonSets
 7) Services
 8) ConfigMaps
+9) Secrets
 
 lets deep dive into each of these objects and understand how to deploy applications using these objects in a Kubernetes cluster.
 
