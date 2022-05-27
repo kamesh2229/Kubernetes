@@ -372,3 +372,23 @@ kubectl run <container-name> --image <image-name>
   spec : The actual spceification of the object i.e the container name, container image its properties and other needed information.
   
   An example of a pod definition file is 
+
+  apiversion: v1. ---- This is the version which the pod is defined
+  kind: Pod -- This is the kubernetes object
+  metdata: 
+    name: redis --- Name of the pod
+    labels:
+      app: my-app --- Labels created for the pod. A label is an identifier which is used to tag an object for refering the object.
+      type: front-end
+  spec:
+    containers:  ---- The container details 
+    - name: redis --- Name of the conatiner
+      image: redis --- The image for the container, This image is stored in the public Docker registry.
+  
+  Once the above file is created the same can be executed using the kubcetl command line utility.
+  
+  kubectl create -f pod.yaml --- After executing the command the pod will be created in the namesapce, if no namespace is provided it will be created in the default namesapce.
+  
+  The pod details can be viewed using kubectl get pods command and the pod status should be "Running".
+  
+  
