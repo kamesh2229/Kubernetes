@@ -280,6 +280,14 @@ What are Kubernetes Objects ?
 Kubernetes objects are persistent entities in the Kubernetes system.Kubernetes uses these entities to represent the state of the cluster.
 Using these objects one can understand what containerized applications are running on which nodes.
 
+Every kubernetes object can be created using a manifest file and it is written in YAML.
+The mainfest file mainly consists of below 4 properties mainly as well it can contain some additional properties as well.
+
+apiVersion:
+kind:
+metadata:
+spec:
+
 The different Kubernetes objects available are as below
 
 1) Pods
@@ -350,4 +358,17 @@ kubectl run <container-name> --image <image-name>
   
   What is a manifest file ?
   
+  A manifest file is an YAML bsed file that contains all the needed details to create the object.
+  So each manifest file conatins the below sections 
   
+  apiVersion:
+  kind:
+  metadata:
+  spec:
+  
+  apiVersion : This is the definition that is tagged to the kind field and based on the kind field the apiVersion will change accordingly.
+  kind: This is the actual object definition like (pod, service etc)
+  metadata: This is the metadata for the object like name of the object, namespace in which it will be created etc
+  spec : The actual spceification of the object i.e the container name, container image its properties and other needed information.
+  
+  An example of a pod definition file is 
