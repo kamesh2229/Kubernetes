@@ -34,6 +34,9 @@ Docker containers are secure and can scale on demand.
 
 Basically on a Kubernetes cluster the applications are deployed as Docker containers. Kubernetes try to orchestrate these containers by providing HA, network connectivity, Scalability, Resilience in a secured way.
 
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/31388628/171625533-e219b411-7742-408b-996c-14689528ede8.png">
+
+
 ### Kubernetes components :
 
 Kuberntes cluster consists of nodes which are master and minion. Can have multiple masters and minions or nodes will be multiple and the configuration of having how many masters and how many minions depends on the use case and the exact requirement.
