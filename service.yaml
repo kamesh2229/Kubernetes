@@ -8,5 +8,6 @@ spec:
    - targetPort: 80
      port: 80
      nodePort: 30004
+     ### Selector is something that will be tagged to the pod labels, this should have the same label defined for the pod and any new pod created with the label will be tagged to this service
   selector:
     type: front-end 
