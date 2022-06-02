@@ -370,10 +370,10 @@ kubectl run <container-name> --image <image-name>
   3)  metadata:
   4) spec:
   
-  apiVersion : This is the definition that is tagged to the kind field and based on the kind field the apiVersion will change accordingly.
-  kind: This is the actual object definition like (pod, service etc)
-  metadata: This is the metadata for the object like name of the object, namespace in which it will be created etc
-  spec : The actual spceification of the object i.e the container name, container image its properties and other needed information.
+ 1) apiVersion : This is the definition that is tagged to the kind field and based on the kind field the apiVersion will change accordingly.
+ 2) kind: This is the actual object definition like (pod, service etc)
+ 3) metadata: This is the metadata for the object like name of the object, namespace in which it will be created etc
+ 4) spec : The actual spceification of the object i.e the container name, container image its properties and other needed information.
   
   An example of a pod definition file is 
 
