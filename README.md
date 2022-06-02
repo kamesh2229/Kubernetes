@@ -47,7 +47,7 @@ Kuberntes cluster consists of nodes which are master and minion. Can have multip
 The master node will maage, plan, Monitor and schedule the nodes i.e Minions.
 
 How a user know which node is master or minion ..
-A Master node will have the components kube-apiserver, Controll-Manager, ETCD-Cluster, Kube-Scheduler.
+A Master node will have the components 1) kube-apiserver 2) Controll-Manager 3) ETCD-Cluster 4) Kube-Scheduler.
 Using these components different tasks are handled to service specific purpose. The detailed discussion on what each component does will be done going forward.
 
 ### worker node:
@@ -87,7 +87,7 @@ So based on the components that are installed on the machines a user can decide 
  
  Kubelet ---> This is the driver of the train who actually ensures the train is on the platform based on instructions from the scheduler who is the signalling system.
  
- Kube-Proxy ---> 
+ Kube-Proxy ---> Kind of signalling system that will be interacted by the driver of the train and routes the trains accordingly to each platform. The signals will be available for each platform similary the kube-proxy installed on each node.
  
  Container Run Time Engine ---> The train is the container.
 
@@ -365,10 +365,10 @@ kubectl run <container-name> --image <image-name>
   A manifest file is an YAML bsed file that contains all the needed details to create the object.
   So each manifest file conatins the below sections 
   
-  apiVersion:
-  kind:
-  metadata:
-  spec:
+  1)  apiVersion:
+  2)  kind:
+  3)  metadata:
+  4) spec:
   
   apiVersion : This is the definition that is tagged to the kind field and based on the kind field the apiVersion will change accordingly.
   kind: This is the actual object definition like (pod, service etc)
