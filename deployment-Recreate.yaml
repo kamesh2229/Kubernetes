@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: kodekloud/webapp-color:v2
+        image: ** Docker Image ***
         ports:
         - containerPort: 8080
           protocol: TCP
