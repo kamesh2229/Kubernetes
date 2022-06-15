@@ -1,6 +1,6 @@
-apiversion: v1
+apiVersion: v1
 kind: Pod
-metdata: 
+metadata: 
   name: redis
   labels:
     app: my-app
