@@ -368,7 +368,7 @@ kubectl run <container-name> --image <image-name>
   1)  apiVersion:
   2)  kind:
   3)  metadata:
-  4) spec:
+  4)  spec:
   
  1) apiVersion : This is the definition that is tagged to the kind field and based on the kind field the apiVersion will change accordingly.
  2) kind: This is the actual object definition like (pod, service etc)
@@ -394,5 +394,36 @@ kubectl run <container-name> --image <image-name>
   kubectl create -f pod.yaml --- After executing the command the pod will be created in the namesapce, if no namespace is provided it will be created in the default namesapce.
   
   The pod details can be viewed using kubectl get pods command and the pod status should be "Running".
+  
+  What happens if a pod is deleted or crashed for some reason ? 
+  
+  If a pod is deleted manually by mistake or crashed for some reason then the application will be down and there is a down time for the service which the user has to re-create the pod which is a tedious process and is not good for production environments.
+  
+  To solve this problem we have a solution called "Deployments" in Kubernetes.
+  
+  
+  ### Deployments
+  
+  What is a Deployment ?
+  
+  For example we need to deploy a web server in production environment and we need to run many instances, as well when a newer version of the application is available on the Docker Registry and need to upgrade the docker instances seamelessly then Kubernetes "Deployments" will help here.
+  
+  A Kubernetes Deployment is an object that helps to run multiple instances of applications and a seameless behavior for upgrading the applications to newer versions and rollong back to older versions when needed.
+  
+  An upgrade can be performed multiple ways.
+  
+  During an upgrade uou dont want to upgrade all instances at once as this may impact the users accessing the applications.So we need to upgrade them one after the other and this type of upgrade is called "Rolling Updates"
+  
+  Suppose after upgrade we feel like there is an unexpected error and you need to undo the recent update which will be achieved by a feature called "rollback".
+  
+  Here is a sample Deployment example illustrating through a diagram.
+  
+  <img width="748" alt="image" src="https://user-images.githubusercontent.com/31388628/173805939-cf6be5d0-49d9-4628-afb6-451fd61d563c.png">
+
+  What is a Replicaset ?
+  
+  As sadi above Deployment object will try to handle multiple instances of the applications and this is achieved through ReplicaSets.
+  
+  A Replicaset is to achieve stable number of replica pods running at any given point of time. It gaurantess the availability of specified number of identical pods.
   
   
